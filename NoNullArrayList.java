@@ -1,15 +1,10 @@
 public class NoNullArrayList<T> extends ArrayList<T>{
-  private T value;
   public NoNullArrayList(){
 
   }
 
   public NoNullArrayList(int startingCapacity){
     value = startingCapacity;
-  }
-
-  public T getValue() {
-    return value;
   }
 
   public String set(int b, String c) {
@@ -20,8 +15,8 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     data[b] = c;
     return d;
 }
-
-public boolean add(String a) {
+//no sorting just putting restrictions so that u add them in order
+  public boolean add(String a) {
     if (size >= (data.length - 1)) {
       resize();
 
