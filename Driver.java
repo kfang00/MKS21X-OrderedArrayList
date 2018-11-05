@@ -18,7 +18,7 @@ public class Driver{
     veggie.add("carrots");
     veggie.add("spinach");
     veggie.add("bok choy");
-    veggie.add(null); UNCOMMENT TO TEST NULL CASES THIS SHOULD THROW BACK
+    // veggie.add(null); //UNCOMMENT TO TEST NULL CASES THIS SHOULD THROW BACK
     System.out.println("Your veggies are: \n" + veggie.toString() + "\n");
 
     // TESTING SETTING
@@ -29,8 +29,8 @@ public class Driver{
     System.out.println("Your fruits are: \n" + fruity.toString());
 
     veggie.set(0, "kale");
-    veggie.set(5, "tomatoes"); UNCOMMENT TO TEST INDEX OUT OF BOUNDS EXCEPTION
-    veggie.set(3, null); UNCOMMENT TO TEST NULL CASES THIS SHOULD BE THROWN BACK
+    //veggie.set(5, "tomatoes"); //UNCOMMENT TO TEST INDEX OUT OF BOUNDS EXCEPTION
+    //veggie.set(3, null); //UNCOMMENT TO TEST NULL CASES THIS SHOULD BE THROWN BACK
     System.out.println("Our new veggies should be: \n[kale, carrots, spinach, bok choy]");
     System.out.println("Your veggies are: \n" + veggie.toString() + "\n");
 
@@ -48,7 +48,7 @@ public class Driver{
     veggie.add("squash");
     veggie.add(2, "lettuce");
     veggie.add(3, "eggplant");
-    veggie.add(null); UNCOMMENT TO TEST NULL CASES THIS SHOULD BE THROWN BACK
+    //veggie.add(null); //UNCOMMENT TO TEST NULL CASES THIS SHOULD BE THROWN BACK
     System.out.println("Our long list of veggies should be: \n[kale, carrots, lettuce, eggplant, spinach, bok choy, pumpkin, squash]");
     System.out.println("Your veggies are: \n" + veggie.toString() + "\n");
   }
