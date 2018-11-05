@@ -9,9 +9,14 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   }
 
   public String set(int b, String c) {
-    return "";
+    if (c.compareTo(null) == 0) {
+      throw new IllegalArgumentException();
+    }
+    else {
+      super.add(b, c);
+    }
   }
-//no sorting just putting restrictions so that u add them in order
+
   public boolean add(String a) {
     return true;
   }
