@@ -18,7 +18,12 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   }
 
   public boolean add(String a) {
-    return true;
+    if (a.compareTo(null) == 0) {
+      throw new IllegalArgumentException();
+    }
+    else {
+      super.add(a);
+    }
   }
 
   public void add(int e, String yay) {
