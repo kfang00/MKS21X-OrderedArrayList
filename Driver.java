@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class Driver {
 	public static void main(String[] args) {
 
@@ -79,6 +80,7 @@ public class Driver {
 			} catch (IllegalArgumentException e) {}
 			if (!(""+array).equals("[p, q, r, x, y, z]")) System.out.println(++c+". You are modifying the array when OrderedArrayList.add(null) is called.");
 			try {
+
 				array.add(0,null);		
 				System.out.println(++c+". You aren't catching nulls when OrderedArrayList.add(index, T) is called.");
 			} catch (IllegalArgumentException e) {}
@@ -91,7 +93,7 @@ public class Driver {
 		} catch (Exception e) {
 			System.out.println(++c+". You are producing a "+e.getClass().getCanonicalName()+" when adding/setting a null value to an OrderedArrayList. You should be throwing IllegalArgumentException instead.");
 		}
-
+                
 		array.clear();
 
 		try {
