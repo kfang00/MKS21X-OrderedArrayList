@@ -7,11 +7,6 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     super(startingCapacity);
   }
 
-  public T set(int b, T c) {
-    super.remove(b);
-    return super.add(b, c);
-  }
-
   public int getIndex(T k) {
     int store = 0;
     for (int x = 0; x < this.size(); x++) {
@@ -28,6 +23,16 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   public void add(int e, T yay) {
-    super.add(getIndex(a), a);
+    super.add(getIndex(yay), yay);  
+  }
+
+  public T set(int b, T c) {
+    T oldelm = this.get(b);
+    super.remove(b);
+    super.add(getIndex(c), c); 
+    return oldelm;
+  }
+
+  
 }
 
