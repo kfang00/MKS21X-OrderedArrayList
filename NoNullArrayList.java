@@ -8,7 +8,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     super(startingCapacity);
   }
 
-  public String set(int b, String c) {
+  public T set(int b, String c) {
     if (c.compareTo(null) == 0) {
       throw new IllegalArgumentException();
     }
@@ -17,7 +17,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     }
   }
 
-  public boolean add(String a) {
+  public T add(String a) {
     if (a.compareTo(null) == 0) {
       throw new IllegalArgumentException();
     }
