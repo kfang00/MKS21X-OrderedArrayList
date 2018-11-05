@@ -8,27 +8,27 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     super(startingCapacity);
   }
 
-  public T set(int b, String c) {
-    if (c.compareTo(null) == 0) {
-      throw new IllegalArgumentException();
+  public T set(int b, T c) {
+    if (c == null) {
+      throw new IllegalArgumentException("set null!!");
     }
     else {
-      super.add(b, c);
+      return super.set(b, c);
     }
   }
 
-  public T add(String a) {
-    if (a.compareTo(null) == 0) {
-      throw new IllegalArgumentException();
+  public boolean add(T a) {
+    if (a == null) {
+      throw new IllegalArgumentException("added null!!");
     }
     else {
-      super.add(a);
+      return super.add(a);
     }
   }
 
-  public void add(int e, String yay) {
-    if (yay.compareTo(null) == 0) {
-      throw new IllegalArgumentException();
+  public void add(int e, T yay) {
+    if (yay == null) {
+      throw new IllegalArgumentException("added null!!");
     }
     else {
       super.add(e, yay);
