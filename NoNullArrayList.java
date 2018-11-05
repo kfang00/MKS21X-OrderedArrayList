@@ -27,7 +27,12 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   }
 
   public void add(int e, String yay) {
-
+    if (yay.compareTo(null) == 0) {
+      throw new IllegalArgumentException();
+    }
+    else {
+      super.add(e, yay);
+    }
   }
 
 }
